@@ -31,6 +31,8 @@ namespace PropertySetupAction
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCustomerId = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.txtHistoryLocation = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtDBLocation = new System.Windows.Forms.TextBox();
@@ -41,8 +43,8 @@ namespace PropertySetupAction
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtCustomerId = new System.Windows.Forms.TextBox();
+            this.btnDatabaseSelect = new System.Windows.Forms.Button();
+            this.btnCSVSelect = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +61,8 @@ namespace PropertySetupAction
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.btnCSVSelect);
+            this.panel1.Controls.Add(this.btnDatabaseSelect);
             this.panel1.Controls.Add(this.txtCustomerId);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.txtHistoryLocation);
@@ -72,6 +76,22 @@ namespace PropertySetupAction
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(330, 312);
             this.panel1.TabIndex = 1;
+            // 
+            // txtCustomerId
+            // 
+            this.txtCustomerId.Location = new System.Drawing.Point(122, 188);
+            this.txtCustomerId.Name = "txtCustomerId";
+            this.txtCustomerId.Size = new System.Drawing.Size(195, 22);
+            this.txtCustomerId.TabIndex = 7;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(16, 191);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(58, 14);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "รหัสร้านค้า";
             // 
             // txtHistoryLocation
             // 
@@ -163,21 +183,25 @@ namespace PropertySetupAction
             this.button2.Text = "&Back";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // label5
+            // btnDatabaseSelect
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(16, 191);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(58, 14);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "รหัสร้านค้า";
+            this.btnDatabaseSelect.Location = new System.Drawing.Point(302, 116);
+            this.btnDatabaseSelect.Name = "btnDatabaseSelect";
+            this.btnDatabaseSelect.Size = new System.Drawing.Size(23, 23);
+            this.btnDatabaseSelect.TabIndex = 8;
+            this.btnDatabaseSelect.Text = "...";
+            this.btnDatabaseSelect.UseVisualStyleBackColor = true;
+            this.btnDatabaseSelect.Click += new System.EventHandler(this.btnDatabaseSelect_Click);
             // 
-            // txtCustomerId
+            // btnCSVSelect
             // 
-            this.txtCustomerId.Location = new System.Drawing.Point(122, 188);
-            this.txtCustomerId.Name = "txtCustomerId";
-            this.txtCustomerId.Size = new System.Drawing.Size(195, 22);
-            this.txtCustomerId.TabIndex = 7;
+            this.btnCSVSelect.Location = new System.Drawing.Point(302, 154);
+            this.btnCSVSelect.Name = "btnCSVSelect";
+            this.btnCSVSelect.Size = new System.Drawing.Size(23, 23);
+            this.btnCSVSelect.TabIndex = 9;
+            this.btnCSVSelect.Text = "...";
+            this.btnCSVSelect.UseVisualStyleBackColor = true;
+            this.btnCSVSelect.Click += new System.EventHandler(this.btnCSVSelect_Click);
             // 
             // FolderSelectForm
             // 
@@ -220,5 +244,7 @@ namespace PropertySetupAction
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtCustomerId;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button btnCSVSelect;
+        private System.Windows.Forms.Button btnDatabaseSelect;
     }
 }

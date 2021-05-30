@@ -48,6 +48,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FolderSelectDialogComponent\FolderselectDialog.cs" />
+    <Compile Include="FolderSelectDialogComponent\Reflector.cs" />
     <Compile Include="FolderSelectForm.cs">
       <SubType>Form</SubType>
     </Compile>

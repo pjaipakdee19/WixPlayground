@@ -43,5 +43,33 @@ namespace PropertySetupAction
             }
             return false;
         }
+
+        private void btnDatabaseSelect_Click(object sender, EventArgs e)
+        {
+            this.TopMost = false;
+            var fsd = new FolderSelectDialog();
+            fsd.Title = "What to select";
+            fsd.InitialDirectory = @"c:\";
+            if (fsd.ShowDialog(IntPtr.Zero))
+            {
+                Console.WriteLine(fsd.FileName);
+                txtDBLocation.Text = fsd.FileName;
+                this.TopMost = true;
+            }
+        }
+
+        private void btnCSVSelect_Click(object sender, EventArgs e)
+        {
+            this.TopMost = false;
+            var fsd = new FolderSelectDialog();
+            fsd.Title = "What to select";
+            fsd.InitialDirectory = @"c:\";
+            if (fsd.ShowDialog(IntPtr.Zero))
+            {
+                Console.WriteLine(fsd.FileName);
+                txtHistoryLocation.Text = fsd.FileName;
+                this.TopMost = true;
+            }
+        }
     }
 }
